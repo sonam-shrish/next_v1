@@ -48,7 +48,7 @@ export default function Home() {
 				<main>
 					<Header />
 					<SearchBar />
-					<CompanyJobVacancy />
+					{/* <CompanyJobVacancy /> */}
 					<RecentJobs />
 					Hello
 				</main>

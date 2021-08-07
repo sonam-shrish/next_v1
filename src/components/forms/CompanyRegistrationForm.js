@@ -243,14 +243,6 @@ const CompanyRegistrationForm = () => {
 					</Button>
 				</form>
 			</Paper>
-			{/* Test */}
-			<FormControl fullWidth className={classes.formControl}>
-				<InputLabel htmlFor='my-input'>Email address</InputLabel>
-				<Input id='my-input' aria-describedby='my-helper-text' />
-				<FormHelperText id='my-helper-text'>
-					We'll never share your email.
-				</FormHelperText>
-			</FormControl>
 		</div>
 	);
 };

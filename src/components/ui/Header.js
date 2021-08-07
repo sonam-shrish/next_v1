@@ -98,7 +98,7 @@ const Header = (props) => {
 			case 3:
 				setActiveTab(4);
 		}
-	}, []);
+	}, [activeTab]);
 
 	function ElevationScroll(props) {
 		const { children } = props;
@@ -148,7 +148,7 @@ const Header = (props) => {
 							className={classes.tabsContainer}
 						>
 							{tabItems.map((tabItem) => (
-								<Link href={tabItem.link}>
+								<Link key={tabItem.tabName} href={tabItem.link}>
 									<Tab label={tabItem.tabName} className={classes.tab} />
 								</Link>
 							))}
@@ -192,7 +192,7 @@ const Header = (props) => {
 
 					<Divider />
 					{tabItems.map((navItem) => (
-						<Link href={navItem.link}>
+						<Link key={navItem.tabName} href={navItem.link}>
 							<ListItem>
 								<ListItemIcon>{navItem.icon}</ListItemIcon>
 								<ListItemText>{navItem.tabName}</ListItemText>

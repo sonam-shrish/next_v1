@@ -214,10 +214,9 @@ const CompanyRegistrationForm = () => {
 								<TextField
 									type='date'
 									required
-									variant='outlined'
+									defaultValue='2011-09-29'
 									size='small'
 									label='Application Deadline'
-									placeholder='Application Deadline'
 									id='application-deadline'
 									aria-describedby='application-deadline'
 								/>
