@@ -2,13 +2,14 @@ import Head from 'next/head';
 import '../styles/Home.module.css';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from '../src/theme';
-import Header from '../src/components/ui/Header';
-import CompanyJobVacancy from '../src/components/forms/vacancyForms/CompanyJobVacancy';
+// import Header from '../src/components/ui/Header';
+// import CompanyJobVacancy from '../src/components/forms/vacancyForms/CompanyJobVacancy';
 
 import SearchBar from '../src/components/ui/SearchBar';
 import RecentJobs from '../src/components/home/RecentJobs/RecentJobs';
 
 import styled from 'styled-components';
+
 const App = styled.div`
 	margin: auto;
 	padding: 20px;
@@ -37,24 +38,24 @@ const App = styled.div`
 
 export default function Home() {
 	return (
-		<App>
-			<ThemeProvider theme={theme}>
+		<div>
+			<App>
 				<Head>
-					<title>Kamxa | </title>
+					<title>Kaamxa | </title>
 					<meta name='description' content='This is Kamxa app' />
 					<link rel='icon' href='/favicon.ico' />
 				</Head>
 
 				<main>
-					<Header />
-					<SearchBar />
+					{/* <Header /> */}
+					{/* <SearchBar /> */}
 					{/* <CompanyJobVacancy /> */}
-					<RecentJobs />
+					{/* <RecentJobs /> */}
 					Hello
 				</main>
 
 				<footer>This is footer</footer>
-			</ThemeProvider>
-		</App>
+			</App>
+		</div>
 	);
 }

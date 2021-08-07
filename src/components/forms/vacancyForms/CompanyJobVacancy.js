@@ -4,9 +4,6 @@ import {
 	FormControl,
 	FormControlLabel,
 	FormLabel,
-	Input,
-	FormHelperText,
-	FormGroup,
 	RadioGroup,
 	Radio,
 	MenuItem,
@@ -17,7 +14,6 @@ import {
 	Typography,
 } from '@material-ui/core';
 import { spacing } from '@material-ui/system';
-import { PhotoCamera } from '@material-ui/icons';
 
 const useStyles = makeStyles({
 	root: {
@@ -46,7 +42,7 @@ const CompanyRegistrationForm = () => {
 					<Typography className={classes.title} variant='h4' component='h2'>
 						Company Job Vacancy
 					</Typography>
-					<Grid container spacing={8}>
+					<Grid container spacing={1}>
 						<Grid item xs={12} md={6}>
 							{/* Job Title */}
 							<FormControl fullWidth className={classes.formControl}>
@@ -60,7 +56,6 @@ const CompanyRegistrationForm = () => {
 							</FormControl>
 
 							{/* Job Category */}
-
 							<FormControl fullWidth className={classes.formControl}>
 								<TextField
 									select
@@ -109,30 +104,36 @@ const CompanyRegistrationForm = () => {
 									aria-describedby='minimum-salary'
 								/>
 							</FormControl>
-							{/* Schedule */}
-							<FormControl fullWidth className={classes.formControl}>
-								<TextField
-									type='time'
-									size='small'
-									variant='outlined'
-									label='Start 
-                  Time'
-									id='start-time'
-									aria-describedby='start-time'
-								/>
-							</FormControl>
-							<FormControl fullWidth className={classes.formControl}>
-								<TextField
-									type='time'
-									size='small'
-									variant='outlined'
-									label='End 
-                  Time'
-									id='end-time'
-									aria-describedby='end-time'
-								/>
-							</FormControl>
+							<Grid container spacing={1}>
+								<Grid item xs={6}>
+									{/* Schedule */}
+									<FormControl fullWidth className={classes.formControl}>
+										<TextField
+											type='time'
+											size='small'
+											variant='outlined'
+											label='Start Time'
+											id='start-time'
+											aria-describedby='start-time'
+										/>
+									</FormControl>
+								</Grid>
+								<Grid item xs={6}>
+									<FormControl fullWidth className={classes.formControl}>
+										<TextField
+											type='time'
+											size='small'
+											variant='outlined'
+											label='End Time'
+											id='end-time'
+											aria-describedby='end-time'
+										/>
+									</FormControl>
+								</Grid>
+							</Grid>
+						</Grid>
 
+						<Grid item xs={12} md={6}>
 							{/* Number of hires */}
 							<FormControl fullWidth className={classes.formControl}>
 								<TextField
@@ -214,6 +215,7 @@ const CompanyRegistrationForm = () => {
 								<TextField
 									type='date'
 									required
+									variant='outlined'
 									defaultValue='2011-09-29'
 									size='small'
 									label='Application Deadline'
